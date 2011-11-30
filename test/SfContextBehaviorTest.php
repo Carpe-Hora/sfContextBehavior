@@ -17,7 +17,7 @@ $behavior_dir = file_exists(__DIR__ . '/../src/')
 require_once $propel_dir . '/runtime/lib/Propel.php';
 require_once $propel_dir . '/generator/lib/util/PropelQuickBuilder.php';
 require_once $propel_dir . '/generator/lib/util/PropelPHPParser.php';
-require_once $behavior_dir . '/sfContextBehavior.php';
+require_once $behavior_dir . '/SfContextBehavior.php';
 
 /**
  * Test for sfContextBehavior
