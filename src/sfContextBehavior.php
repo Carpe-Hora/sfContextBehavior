@@ -27,7 +27,7 @@ class sfContextBehavior extends Behavior
       }
     }
 
-    public function objectMethods($builder)
+    protected function getApplicationContextFunction()
     {
       return <<<EOF
 /**
@@ -51,5 +51,22 @@ protected function getApplicationContext()
 
 }
 EOF;
+    }
+
+    public function objectMethods($builder)
+    {
+      return $this->getApplicationContextFunction();
+    }
+
+    public function queryMethods($builder)
+    {
+      return $this->getApplicationContextFunction();
+    }
+
+    public function peerFilter(&$script)
+    {
+      $parser = new PropelPHPParser($script, true);
+      $parser->addMethodBefore('translateFieldName', $this->getApplicationContextFunction());
+      $script = $parser->getCode();
     }
 } // END OF sfContextBehavior
