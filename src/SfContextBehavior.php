@@ -10,7 +10,7 @@
  */
 
 /**
- * define confidentiality level
+ * Make table context aware
  */
 class sfContextBehavior extends Behavior
 {

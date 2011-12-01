@@ -60,6 +60,19 @@ EOF;
     }
   }
 
+  public function testMethodExists()
+  {
+    $this->assertTrue(method_exists('sfContextBehaviorTest1', 'getApplicationContext'));
+    $this->assertTrue(method_exists('sfContextBehaviorTest2', 'getApplicationContext'));
+    $this->assertTrue(method_exists('sfContextBehaviorTest3', 'getApplicationContext'));
+    $this->assertTrue(method_exists('sfContextBehaviorTest1Peer', 'getApplicationContext'));
+    $this->assertTrue(method_exists('sfContextBehaviorTest2Peer', 'getApplicationContext'));
+    $this->assertTrue(method_exists('sfContextBehaviorTest3Peer', 'getApplicationContext'));
+    $this->assertTrue(method_exists('sfContextBehaviorTest1Query', 'getApplicationContext'));
+    $this->assertTrue(method_exists('sfContextBehaviorTest2Query', 'getApplicationContext'));
+    $this->assertTrue(method_exists('sfContextBehaviorTest3Query', 'getApplicationContext'));
+  }
+
   public function testApplyOnAllTables()
   {
     $this->assertTrue(method_exists('sfContextBehaviorTest1', 'getApplicationContext'));
