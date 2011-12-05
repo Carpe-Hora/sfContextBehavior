@@ -2,8 +2,7 @@
 /**
  * This file declare the sfContextBehavior class.
  *
- * @package Loopkey
- * @subpackage lib-propel-behavior
+ * @package propel.generator.behavior.sf_context
  * @author Julien Muetton <julien_muetton@carpe-hora.com>
  * @copyright (c) Carpe Hora SARL 2011
  * @since 2011-11-30
