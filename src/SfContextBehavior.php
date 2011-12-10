@@ -38,7 +38,7 @@ protected function getApplicationContext()
 {
     try
     {
-      if (\$sf_context = sfContext::getInstance())
+      if (class_exists('sfContext') && \$sf_context = sfContext::getInstance())
       {
         return \$sf_context;
       }
